@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7749560838405621644}
   - component: {fileID: 1547980746798885841}
   - component: {fileID: 1183593605709218811}
-  - component: {fileID: 4884218827537029486}
   - component: {fileID: -1176517636706577947}
+  - component: {fileID: 4884218827537029486}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Untagged
@@ -129,21 +129,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4884218827537029486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496205414963667473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9961be4afa31a1419fe5f96adbe9603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnBulletDamage: {fileID: 6024876815095282719, guid: b60f21fe9afea9340a242ce8d465400d, type: 3}
-  _spawnBulletTime: {fileID: 6474476335531204895, guid: 11876b93c6c96d847a35ad2c60bb639d, type: 3}
-  spawnRate: 1
 --- !u!61 &-1176517636706577947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -189,3 +174,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &4884218827537029486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496205414963667473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9961be4afa31a1419fe5f96adbe9603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnBulletDamage: {fileID: 6024876815095282719, guid: b60f21fe9afea9340a242ce8d465400d, type: 3}
+  _spawnBulletTime: {fileID: 6474476335531204895, guid: 11876b93c6c96d847a35ad2c60bb639d, type: 3}
+  spawnRate: 1
