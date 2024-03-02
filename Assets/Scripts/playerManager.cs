@@ -2,27 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
 
+    
     public int playerHealth = 3;
-    public int playerMaxHealth = 3;
+    public int overDriveShieldBurts = 3;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerHealth = playerMaxHealth;
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage()
     {
         
-    }
-    public void TakeDamage(int damageAmount)
-    {
-        
-        playerHealth -= damageAmount;
+        playerHealth -= 1;
        
         if (playerHealth <= 0)
         {
@@ -30,13 +20,14 @@ public class playerManager : MonoBehaviour
         }
     }
 
-    public void GetSlowed(float slowedAmount)
+    public void GetSlowed()
     {
-
+        
     }
 
     void Die()
     {
         Debug.Log("Player died!");
+        gameObject.GetComponent<SceneLoader>().LoadScene();
     }
 }

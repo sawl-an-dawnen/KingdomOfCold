@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
     private void Awake()
     {
         input = new CustomInputs();
-        Debug.Log("input PM: " + input);
+        //Debug.Log("input PM: " + input);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -81,7 +81,7 @@ public class playerMovement : MonoBehaviour
     public void OnMovementPerformed(InputAction.CallbackContext value)
     {
         moveVector = value.ReadValue<Vector2>();
-        Debug.Log("Move Vector: " + moveVector);
+        //Debug.Log("Move Vector: " + moveVector);
     }
 
     public void OnMovementCancelled(InputAction.CallbackContext value)
@@ -92,7 +92,7 @@ public class playerMovement : MonoBehaviour
     
     public void OSButton(InputAction.CallbackContext context)
     {
-        Debug.Log("Player used OSB");
+        //Debug.Log("Player used OSB");
 
         // Find all objects tagged as "bullet"
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");

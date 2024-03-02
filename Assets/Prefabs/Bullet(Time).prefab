@@ -106,7 +106,6 @@ MonoBehaviour:
   bulletDamage: 0
   slowAmount: 0
   playerTimerIncrement: 0
-  PlayerManager: {fileID: 0}
 --- !u!50 &7739939498911835767
 Rigidbody2D:
   serializedVersion: 4
@@ -168,7 +167,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.04
 --- !u!95 &-5130387786783082818
 Animator:
   serializedVersion: 5

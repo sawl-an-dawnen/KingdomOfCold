@@ -10,11 +10,13 @@ public class EnemyController : MonoBehaviour
     public Vector3 direction;
 
     private Transform playerTarget;
+    private PlayerManager playerManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -45,5 +47,13 @@ public class EnemyController : MonoBehaviour
         
     }
 
-    //oncollide do damage
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("ENEMY COLLISION");
+            playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
+            playerManager.GetSlowed(); // Call GetSlowed method from PlayerManager
+        }
+    }
 }

@@ -10,10 +10,12 @@ public class PlayerDodge : MonoBehaviour
     [SerializeField] float dodgePower = 200f;
     [SerializeField] float dodgeDistance = 50f;
     [SerializeField] float dodgeCooldown = 1f;
+    [SerializeField] float invisibleCounter = .5f;
 
     private bool isDodging;
     private bool canDodge = true;
     private Rigidbody2D rb;
+    private BoxCollider2D boxCollider;
     private playerMovement movementScript;
     private CustomInputs input;
 
@@ -26,12 +28,13 @@ public class PlayerDodge : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         movementScript = GetComponent<playerMovement>();
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     public void OnEnable()
     {
         input.Enable();
         input.Player.Dodging.performed += Dodge;
-        Debug.Log("Player  Dodge Enabled");
+        //Debug.Log("Player  Dodge Enabled");
     }
 
     public void OnDisable()
@@ -51,6 +54,7 @@ public class PlayerDodge : MonoBehaviour
             StartCoroutine(PerformDodge());
             canDodge = false; // Disable dodge until cooldown is over
             StartCoroutine(DodgeCooldown()); // Start the dodge cooldown timer
+            StartCoroutine(InvinsibleCounter());
             animator.StopPlayback();
             if (movementScript.moveVector.x >= 0f)
             {
@@ -67,6 +71,7 @@ public class PlayerDodge : MonoBehaviour
 
     private IEnumerator PerformDodge()
     {
+        boxCollider.enabled = false;
         // Calculate dodge direction
         Vector2 dodgeDirection = movementScript.moveVector.normalized; // Dodge in the direction of movement
         Debug.Log("Dodge Direction: " + dodgeDirection);
@@ -107,5 +112,11 @@ public class PlayerDodge : MonoBehaviour
     {
         yield return new WaitForSeconds(dodgeCooldown);
         canDodge = true; // Enable dodge after cooldown is over
+        boxCollider.enabled = true;
+    }
+    private IEnumerator InvinsibleCounter()
+    {
+        yield return new WaitForSeconds(invisibleCounter);
+        boxCollider.enabled = true;
     }
 }

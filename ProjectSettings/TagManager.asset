@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Game Manager
+  - Wall
   layers:
   - Default
   - TransparentFX
