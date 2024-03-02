@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = (playerTarget.position - gameObject.transform.position).normalized;
         GetComponent<Rigidbody2D>().velocity = direction * speed;
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -39,4 +39,5 @@ public class BulletController : MonoBehaviour
             }
         }
     }
+    */
 }
