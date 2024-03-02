@@ -5,93 +5,70 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
-    private CustomInputs input = null;
-    private Vector2 moveVector = Vector2.zero;
-    private InputAction osbFire;
-    private InputAction dodge;
+    public CustomInputs input = null;
+    public Vector2 moveVector = Vector2.zero;
     private Rigidbody2D rb = null;
     public float moveSpeed = 10f;
 
 
-    [Header("Dodge Settings")]
-    [SerializeField] float dodgeSpeed = 40f;
-    [SerializeField] float dodgeDuration = 1f;
-    [SerializeField] float dodgeCooldown = 1f;
-    bool isDodging;
+    
+    private void Update()
+    {
+        rb.velocity = moveVector * moveSpeed;
+    }
 
     private void Awake()
     {
         input = new CustomInputs();
+        Debug.Log("input PM: " + input);
         rb = GetComponent<Rigidbody2D>();
     }
-    private void OnEnable()
+    public void OnEnable()
     {
         input.Enable();
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
-        
-        osbFire = input.Player.OSB;
-        osbFire.Enable();
-        osbFire.performed += OSButton;
-
-        dodge = input.Player.Dodging;
-        dodge.Enable();
-        dodge.performed += DodgePerformed;
-
-
-
+        input.Player.OSB.performed += OSButton;
         
 
     }
-    private void OnDisable()
+    public void OnDisable()
     {
         input.Disable();
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCancelled;
+        input.Player.OSB.performed -= OSButton;
+        
 
-        osbFire.Disable();
-        dodge.Disable();
+
+
     }
 
-    private void FixedUpdate()
-    {
-        rb.velocity = moveVector*moveSpeed;
-    }
-
-    private void OnMovementPerformed(InputAction.CallbackContext value)
+    public void OnMovementPerformed(InputAction.CallbackContext value)
     {
         moveVector = value.ReadValue<Vector2>();
-
+        Debug.Log("Move Vector: " + moveVector);
     }
 
-    private void OnMovementCancelled(InputAction.CallbackContext value)
+    public void OnMovementCancelled(InputAction.CallbackContext value)
     {
         moveVector = Vector2.zero;
 
     }
 
-    private void DodgePerformed(InputAction.CallbackContext value)
-    {
-        if (!isDodging)
-        {
-            StartCoroutine(DodgeCoroutine());
-        }
-    }
+    
 
-    IEnumerator DodgeCoroutine()
-    {
-        isDodging = true;
-        Debug.Log("Player used dodge");
-        Vector2 dodgeDirection = moveVector.normalized; 
-        rb.velocity = dodgeDirection * dodgeSpeed;
-
-        yield return new WaitForSeconds(dodgeDuration);
-
-        isDodging = false;
-    }
-
-    private void OSButton(InputAction.CallbackContext value)
+    public void OSButton(InputAction.CallbackContext context)
     {
         Debug.Log("Player used OSB");
+
+        // Find all objects tagged as "bullet"
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("bullet");
+
+        // Destroy all bullets
+        foreach (GameObject bullet in bullets)
+        {
+            Destroy(bullet);
+        }
     }
 }
