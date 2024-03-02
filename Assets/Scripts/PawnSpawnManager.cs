@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class PawnSpawnManager : MonoBehaviour
 {
     [SerializeField] private bool isGameActive = true;
     [SerializeField] public GameObject _spawnPawnPrefab; //pawn instance
@@ -24,14 +24,13 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (isGameActive)
+        if (currSpawnTimer <= Time.deltaTime)
         {
-            if (currSpawnTimer <= Time.time)
-            {
-                currSpawnTimer = Time.time + spawnRate + (Time.time - currSpawnTimer);
-                Instantiate(_spawnPawnPrefab,
-                new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, 0), Quaternion.identity);
-            }
+            currSpawnTimer = Time.deltaTime + spawnRate + (Time.deltaTime - currSpawnTimer);
+            Instantiate(_spawnPawnPrefab,
+            new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, 0), Quaternion.identity);
+            _spawnPawnPrefab.GetComponent<SpriteRenderer>().enabled = true;
+
         }
     }
 
