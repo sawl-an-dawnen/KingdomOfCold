@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerDamageTester : MonoBehaviour
 {
-    private playerManager PlayerManager;
+    public playerManager PlayerManager;
 
     // Start is called before the first frame update
     void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerManager : MonoBehaviour
 {
 
-    public int playerHealth;
+    public int playerHealth = 3;
     public int playerMaxHealth = 3;
 
     // Start is called before the first frame update
@@ -21,13 +21,18 @@ public class playerManager : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
-        Debug.Log("Before: "+ playerHealth);
+        
         playerHealth -= damageAmount;
-        Debug.Log("After: " + playerHealth);
+       
         if (playerHealth <= 0)
         {
             Die();
         }
+    }
+
+    public void GetSlowed(float slowedAmount)
+    {
+
     }
 
     void Die()
