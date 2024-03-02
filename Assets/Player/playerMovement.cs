@@ -14,7 +14,7 @@ public class playerMovement : MonoBehaviour
 
 
     [Header("Dodge Settings")]
-    [SerializeField] float dodgeSpeed = 10f;
+    [SerializeField] float dodgeSpeed = 40f;
     [SerializeField] float dodgeDuration = 1f;
     [SerializeField] float dodgeCooldown = 1f;
     bool isDodging;
@@ -72,18 +72,21 @@ public class playerMovement : MonoBehaviour
 
     private void DodgePerformed(InputAction.CallbackContext value)
     {
-        DodgeCoroutine();
+        if (!isDodging)
+        {
+            StartCoroutine(DodgeCoroutine());
+        }
     }
 
     IEnumerator DodgeCoroutine()
     {
-        if (isDodging)
-            yield break;
-
         isDodging = true;
-        Debug.Log("Player Dodged");
-        rb.velocity = moveVector * dodgeSpeed;
+        Debug.Log("Player used dodge");
+        Vector2 dodgeDirection = moveVector.normalized; 
+        rb.velocity = dodgeDirection * dodgeSpeed;
+
         yield return new WaitForSeconds(dodgeDuration);
+
         isDodging = false;
     }
 
