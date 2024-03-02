@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class playerDamageTester : MonoBehaviour
 {
-    public playerManager PlayerManager;
+    public PlayerManager playerManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager = GetComponent<playerManager>();
+        playerManager = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class playerDamageTester : MonoBehaviour
         {
             Debug.Log("Pressed " + KeyCode.L);
             // Call the TakeDamage function with a damage amount of 1.
-            PlayerManager.TakeDamage(1);
+            playerManager.TakeDamage();
         }
     }
 }

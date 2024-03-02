@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class PawnSpawnManager : MonoBehaviour
 {
-    [SerializeField] public GameObject[] _spawnPawn; //pawn instance
-    [SerializeField] public GameObject _spawnPawnDamage; //pawn instance
-    [SerializeField] public GameObject _spawnPawnTimer; //pawn instance
-    [SerializeField] public GameObject _spawnPoint; //pawn instance
+    public GameObject[] _spawnPawn; //pawn instance
+    public GameObject _spawnPawnDamage; //pawn instance
+    public GameObject _spawnPawnTimer; //pawn instance
 
-    //public float xSpawn = 5.0f; //X-position pawn spawning bounds
-    //public float ySpawn = 0.0f; //Y-position pawn spawn
-    private float currSpawnTimer;
     public float spawnRate = 5.0f; // rate at which pawns spawns
-    
+    public float variance = 3.0f;
+
+    private float currSpawnTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +28,6 @@ public class PawnSpawnManager : MonoBehaviour
         //Debug.Log(Random.Range(0, 2));
         if (currSpawnTimer <= 0.0f)
         {
-
-            //currSpawnTimer = Time.deltaTime + spawnRate + (Time.deltaTime - currSpawnTimer);
 
             int pawnSpawnType = Random.Range(0, 2);
 
@@ -50,29 +47,8 @@ public class PawnSpawnManager : MonoBehaviour
                 //Debug.Log(pawnSpawnType);
                 //Debug.Log("Spawn Timer Pawn");
             }
-
-            // Spawn Pawn Prefab at random x.position within set bounds
-            //Instantiate(_spawnPawnPrefab,
-            //new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, 0), Quaternion.identity);
-
             
-            currSpawnTimer = spawnRate;
-            
-
+            currSpawnTimer = spawnRate + Random.Range(-variance,variance);
         }
     }
-
-    /*IEnumerator SpawnRoutine()
-    {
-
-        while (isGameActive)
-        {
-            Instantiate(_spawnPawnPrefab, 
-                new Vector3(Random.Range(-xSpawnRange, xSpawnRange), ySpawn, 0), Quaternion.identity);
-            yield return new WaitForSeconds(spawnRateTime);
-
-
-        }
-    }
-    */
 }
