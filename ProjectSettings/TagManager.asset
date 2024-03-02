@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Game Manager
+  - Timer
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,8 @@ public class BulletController : MonoBehaviour
     public int bulletDamage;
     public float slowAmount ;
     public float playerTimerIncrement;
-    public playerManager PlayerManager;
+    private playerManager PlayerManager;
+    private gameManager GameManager;
 
     
 
@@ -27,7 +28,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = (playerTarget.position - gameObject.transform.position).normalized;
         GetComponent<Rigidbody2D>().velocity = direction * speed;
         PlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<playerManager>();
-
+        GameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<gameManager>();
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,9 +50,10 @@ public class BulletController : MonoBehaviour
             if (type == Type.Time)
             {
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
+                GameManager.AddTime(playerTimerIncrement);
                 PlayerManager.GetSlowed(bulletDamage); // Call GetSlowed method from PlayerManager
                 Debug.Log("Player has been hit. Slowed by by " + slowAmount + ".");
-                Debug.Log("Player has been hit. Increment Time by 5.0f.");
+                Debug.Log("Player has been hit. Increment Time by" + playerTimerIncrement + ".");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
         }

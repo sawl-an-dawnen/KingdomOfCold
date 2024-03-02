@@ -103,7 +103,8 @@ MonoBehaviour:
   speed: 50
   bulletSlowTime: 0
   bulletDamage: 0
-  playerTimerIncrement: 0
+  slowAmount: 0
+  playerTimerIncrement: 10
 --- !u!50 &7739939498911835767
 Rigidbody2D:
   serializedVersion: 4
