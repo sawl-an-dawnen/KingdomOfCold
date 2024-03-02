@@ -17,12 +17,15 @@ public class PlayerDodge : MonoBehaviour
     private playerMovement movementScript;
     private CustomInputs input;
 
+    private Animator animator;
+
 
     private void Awake()
     {
         input = new CustomInputs();
         rb = GetComponent<Rigidbody2D>();
         movementScript = GetComponent<playerMovement>();
+        animator = GetComponent<Animator>();
     }
     public void OnEnable()
     {
@@ -48,7 +51,18 @@ public class PlayerDodge : MonoBehaviour
             StartCoroutine(PerformDodge());
             canDodge = false; // Disable dodge until cooldown is over
             StartCoroutine(DodgeCooldown()); // Start the dodge cooldown timer
+            animator.StopPlayback();
+            if (movementScript.moveVector.x >= 0f)
+            {
+                animator.Play("dodge_right");
+            }
+            else
+            {
+                animator.Play("dodge_left");
+            }
+            animator.StopPlayback();
         }
+
     }
 
     private IEnumerator PerformDodge()
