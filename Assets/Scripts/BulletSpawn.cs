@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
+using UnityEngine.UIElements;
 
 public class BulletSpawn : MonoBehaviour
 {
-    [SerializeField] private bool isPawnActive = true;
-    [SerializeField] public GameObject _spawnBulletPrefab; //pawn instance
-
-    public float xSpawn = 5.0f; //X-position pawn spawning bounds
-    public float ySpawn = 0.0f; //Y-position pawn spawn
-    public float currSpawnTimer = 0.0f;
+    [SerializeField] public GameObject _spawnBulletDamage; //pawn instance
+    [SerializeField] public GameObject _spawnBulletTime; //pawn instance
     public float spawnRate = 5.0f; // rate at which pawns spawns
 
-
-
+    private float currSpawnTimer = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +21,20 @@ public class BulletSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (isPawnActive)
+        currSpawnTimer -= Time.deltaTime;
+
+        if (currSpawnTimer <= 0f)
         {
-            if (currSpawnTimer <= Time.time)
+            int bulletType = Random.Range(0, 1);
+            if (bulletType == 0)
             {
-                currSpawnTimer = Time.time + spawnRate + (Time.time - currSpawnTimer);
-                Instantiate(_spawnBulletPrefab, new Vector3(xSpawn, ySpawn, 0), Quaternion.identity);
+                Instantiate(_spawnBulletDamage, gameObject.transform.position, this.transform.rotation, gameObject.transform);
             }
+            if (bulletType == 1)
+            {
+                Instantiate(_spawnBulletTime, gameObject.transform.position, this.transform.rotation, gameObject.transform);
+            }
+            currSpawnTimer = spawnRate;
         }
     }
 }
