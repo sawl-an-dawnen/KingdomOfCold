@@ -6,22 +6,21 @@ using UnityEngine.Windows;
 
 public class PlayerDodge : MonoBehaviour
 {
-    public CustomInputs input = null;
-    public Rigidbody2D rb = null;
-    public playerMovement movementScript = null;
-
     [Header("Dodge Settings")]
     [SerializeField] float dodgePower = 200f;
     [SerializeField] float dodgeDistance = 50f;
     [SerializeField] float dodgeCooldown = 1f;
+
     private bool isDodging;
     private bool canDodge = true;
+    private Rigidbody2D rb;
+    private playerMovement movementScript;
+    private CustomInputs input;
 
 
     private void Awake()
     {
         input = new CustomInputs();
-        
         rb = GetComponent<Rigidbody2D>();
         movementScript = GetComponent<playerMovement>();
     }
