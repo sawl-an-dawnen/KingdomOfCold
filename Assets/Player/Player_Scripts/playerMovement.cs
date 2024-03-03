@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class playerMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private Animator animator;
+
+    private RawImage shieldBurst;
+    private bool shieldActivated = false;
+    public float fadeAway = 5f;
     
     private void Awake()
     {
@@ -20,6 +25,7 @@ public class playerMovement : MonoBehaviour
         //Debug.Log("input PM: " + input);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
     }
 
     private void Update()
@@ -60,6 +66,13 @@ public class playerMovement : MonoBehaviour
             animator.SetBool("Idle", true);
             IsolateAnimation("Idle");
         }
+
+        if (shieldActivated) {
+            shieldBurst.color = new Color(1f, 1f, 1f, (shieldBurst.color.a - (5f * Time.deltaTime)));
+            if (shieldBurst.color.a <= 0f) {
+                shieldActivated = false;
+            }
+        }
     }
 
     public void OnEnable()
@@ -93,6 +106,9 @@ public class playerMovement : MonoBehaviour
     public void OSButton(InputAction.CallbackContext context)
     {
         //Debug.Log("Player used OSB");
+
+        shieldBurst.color = new Color(1f, 1f, 1f, 1f);
+        shieldActivated = true;
 
         // Find all objects tagged as "bullet"
         GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
