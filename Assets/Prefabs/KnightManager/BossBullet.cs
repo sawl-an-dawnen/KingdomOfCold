@@ -49,7 +49,7 @@ public class BossBullet : MonoBehaviour
             if (type == Type.Damage)
             {
                 playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
-                playerManager.GetSlowed(); // Call GetSlowed method from PlayerManager
+                playerManager.GetSlowed(10f); // Call GetSlowed method from PlayerManager
                 Debug.Log("RED BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
@@ -58,7 +58,7 @@ public class BossBullet : MonoBehaviour
             if (type == Type.Time)
             {
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
-                playerManager.GetSlowed(); // Call GetSlowed method from PlayerManager
+                playerManager.GetSlowed(10f); // Call GetSlowed method from PlayerManager
                 Debug.Log("BLUE BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
