@@ -57,15 +57,18 @@ Asset Sources:
     
     Music: Benjamin Price using beepbox.co
     
-    Tutorial Ambiance: https://freesound.org/people/blouhond/sounds/157947/
+    Tutorial Ambiance: 
+    https://freesound.org/people/blouhond/sounds/157947/
     
-    Player Freeze Hit: https://pixabay.com/sound-effects/ice-winter-snow-walking-on-ice-i-138237/
+    Player Freeze Hit: 
+    https://pixabay.com/sound-effects/ice-winter-snow-walking-on-ice-i-138237/
     
     2nd Level Boss Laughs:  
     https://pixabay.com/sound-effects/santaclaus-hohoho-73051/ 
     https://pixabay.com/sound-effects/santa-claus-merry-christmas-ho-ho-ho-103426/ 
     
-    Over Shield Blast: https://pixabay.com/sound-effects/air-hockey-smack-61272/ and https://pixabay.com/sound-effects/wind-blow-141288/
+    Over Shield Blast: 
+    https://pixabay.com/sound-effects/air-hockey-smack-61272/ and https://pixabay.com/sound-effects/wind-blow-141288/
     
     Player Death: Voiced by Benjamin Price 🙂
     
