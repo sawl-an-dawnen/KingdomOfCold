@@ -53,9 +53,11 @@ Controller Controls:
 
 Asset Sources:
 
-    Sound Design: Benjamin Price
+    Sound Design: 
+    Benjamin Price
     
-    Music: Benjamin Price using beepbox.co
+    Music: 
+    Benjamin Price using beepbox.co
     
     Tutorial Ambiance: 
     https://freesound.org/people/blouhond/sounds/157947/
