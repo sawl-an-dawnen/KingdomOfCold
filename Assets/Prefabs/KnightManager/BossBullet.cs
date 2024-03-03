@@ -12,15 +12,21 @@ public class BossBullet : MonoBehaviour
     public float rotation = 0f;
     public float speed = 1f;
 
+    public float timePenalty = 5f;
+    [Range(0.0f, 100f)]
+    public float speedPenalty = 30f;
+
     private Vector2 spawnPoint;
-    private float timer;
+    private float timer = 0f;
 
     private PlayerManager playerManager;
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         spawnPoint = new Vector2(transform.position.x, transform.position.y);
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -49,7 +55,7 @@ public class BossBullet : MonoBehaviour
             if (type == Type.Damage)
             {
                 playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
-                playerManager.GetSlowed(10f); // Call GetSlowed method from PlayerManager
+                playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
                 Debug.Log("RED BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
@@ -57,8 +63,9 @@ public class BossBullet : MonoBehaviour
             //if player is hit by a TimeBullet, increment player remaining time
             if (type == Type.Time)
             {
+                gameManager.AddTime(timePenalty);
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
-                playerManager.GetSlowed(10f); // Call GetSlowed method from PlayerManager
+                playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
                 Debug.Log("BLUE BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
