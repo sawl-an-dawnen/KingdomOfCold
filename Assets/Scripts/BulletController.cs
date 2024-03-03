@@ -10,6 +10,8 @@ public class BulletController : MonoBehaviour
 
     public float speed = 50f;
     public float timePenalty = 5f;
+    [Range(0.0f, 100f)]
+    public float speedPenalty = 10f;
     public AudioClip audioClip;
 
     private PlayerManager playerManager;
@@ -31,14 +33,14 @@ public class BulletController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Collided with player");
+            //Debug.Log("Collided with player");
             playerAudio.PlayOneShot(audioClip);
             //if player is hit by a DamageBullet, decrement player health.
             if (type == Type.Damage)
             {
                 playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
-                playerManager.GetSlowed(30f); // Call GetSlowed method from PlayerManager
-                Debug.Log("RED BULLET");
+                playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
+                //Debug.Log("RED BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
 
@@ -46,8 +48,8 @@ public class BulletController : MonoBehaviour
             if (type == Type.Time)
             {
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
-                playerManager.GetSlowed(20f); // Call GetSlowed method from PlayerManager
-                Debug.Log("BLUE BULLET");
+                playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
+                //Debug.Log("BLUE BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
             }
         }

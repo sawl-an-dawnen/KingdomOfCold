@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
     public void GetSlowed(float speedPenalty)
     {
         Debug.Log("GetSlowed() Called");
-        movement.moveSpeed = defaultSpeed * speedPenalty * .01f;
+        movement.moveSpeed = defaultSpeed * (1-(speedPenalty * .01f));
         timer = penaltyDuration;
     }
 
