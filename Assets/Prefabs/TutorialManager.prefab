@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3717526521004396964
+--- !u!1 &570136405409964541
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5066748588784262008}
-  - component: {fileID: 2403043053813687762}
+  - component: {fileID: 1053781717199473974}
+  - component: {fileID: 4006993569369164076}
   m_Layer: 0
   m_Name: TutorialManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5066748588784262008
+--- !u!4 &1053781717199473974
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3717526521004396964}
+  m_GameObject: {fileID: 570136405409964541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.485727, y: 12.175023, z: -0.7568145}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2403043053813687762
+--- !u!114 &4006993569369164076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3717526521004396964}
+  m_GameObject: {fileID: 570136405409964541}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3b249ffbdf4d0b4cb7da57e9d164f38, type: 3}
@@ -48,4 +48,7 @@ MonoBehaviour:
   - Use WASD to move
   - Use Space  to Dodge
   - Use F to Clear the Screen
+  - Red Spells cause Damage
+  - Blue Spells increase Time
+  - Make it to the end
   prompt: {fileID: 0}

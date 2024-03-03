@@ -207,7 +207,151 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &463821546
+--- !u!1 &178705018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 570136405409964541, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+  m_PrefabInstance: {fileID: 1113562901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &178705021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178705018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8148d6cc7f73f4eb78d8e03d4e3426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Level01
+  activateArray: []
+  isReset: 0
+--- !u!1001 &1113562901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 570136405409964541, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_Name
+      value: TutorialManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.485727
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.175023
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7568145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053781717199473974, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: prompt
+      value: 
+      objectReference: {fileID: 2127374603}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: promptTimer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[0]
+      value: Welcome to our game!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[1]
+      value: 'Your goal is to survive each level until the timer runs out! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[2]
+      value: 'Use WASD or the left thumbstick to move! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[3]
+      value: 'Great job! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[4]
+      value: 'Use the space bar or X button on your XBOX controller to DODGE DIP
+        AND DASH through bullets and enemies! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[5]
+      value: 'You''ll definitly need to dodge some of these attacks! ;) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[6]
+      value: 'Press F or A on your XBOX controller to activate our patented OH SH..
+        "Overdrive Shield Burst" ability! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[7]
+      value: 'This ability will remove all the bullets from your screen. Use it in
+        emergencies! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[8]
+      value: 'RED spells will take a life away! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[9]
+      value: 'BLUE spells will increase the amount of time you have to survive the
+        enemy barrage! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[10]
+      value: 'Good luck! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      propertyPath: instructions.Array.data[11]
+      value: Remember, HANG IN THERE!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 570136405409964541, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 178705021}
+  m_SourcePrefab: {fileID: 100100000, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
+--- !u!1 &1192429902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,22 +359,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 463821548}
-  - component: {fileID: 463821547}
+  - component: {fileID: 1192429904}
+  - component: {fileID: 1192429903}
   m_Layer: 0
-  m_Name: BGAmbiance
+  m_Name: BGMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &463821547
+--- !u!82 &1192429903
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463821546}
+  m_GameObject: {fileID: 1192429902}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -320,16 +464,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &463821548
+--- !u!4 &1192429904
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463821546}
+  m_GameObject: {fileID: 1192429902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62014675, y: 7.910174, z: 6.423525}
+  m_LocalPosition: {x: 0.8004801, y: 7.813146, z: 6.4286437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -492,6 +636,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+--- !u!114 &2127374603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3535877678182741776, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+  m_PrefabInstance: {fileID: 1311742567661900286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1311742567661900286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,6 +658,18 @@ PrefabInstance:
     - target: {fileID: 1377429463122905373, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535877678182741776, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535877678182741776, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439653898341932191, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: m_TagString
+      value: Prompt
       objectReference: {fileID: 0}
     - target: {fileID: 5758321659651548136, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -545,7 +712,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1868795084374769115, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
@@ -557,4 +725,5 @@ SceneRoots:
   - {fileID: 1444206048}
   - {fileID: 1311742567661900286}
   - {fileID: 1486385739}
-  - {fileID: 463821548}
+  - {fileID: 1113562901}
+  - {fileID: 1192429904}
