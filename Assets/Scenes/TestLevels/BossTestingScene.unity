@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4138130041331829107, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       propertyPath: m_LocalScale.x
@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503268936448383723, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5503268936448383723, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_TagString
@@ -912,6 +912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 3826036932434627624, guid: dabdfe682cf62fe4388cafc1651c64fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -931,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4138130041331829107, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       propertyPath: m_LocalScale.x
