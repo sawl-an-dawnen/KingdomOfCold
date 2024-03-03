@@ -142,7 +142,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songSpeed: 0.5
-  MAX_SONG_SPEED: 0.5
-  MIN_SONG_SPEED: 2
+  isCrunchTime: 0
+  SLOW_SONG_SPEED_CAP: 0.66
+  FAST_SONG_SPEED_CAP: 1
+  FAST_SPEED_BUFFER: 1.5
   waitTime: 1
-  timeRemaining: 150
+  crunchPercent: 0.2
+  TIME_DURATION: 300
