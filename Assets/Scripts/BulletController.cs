@@ -13,6 +13,7 @@ public class BulletController : MonoBehaviour
     public AudioClip audioClip;
 
     private PlayerManager playerManager;
+    private GameManager gameManager;
     private AudioSource playerAudio;
     private Transform playerTarget;
 
@@ -25,6 +26,7 @@ public class BulletController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = direction * speed;
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         playerAudio = GameObject.FindGameObjectWithTag("Player").transform.Find("HitSfx").GetComponent<AudioSource>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +48,7 @@ public class BulletController : MonoBehaviour
             if (type == Type.Time)
             {
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
+                gameManager.AddTime(timePenalty);
                 playerManager.GetSlowed(); // Call GetSlowed method from PlayerManager
                 Debug.Log("BLUE BULLET");
                 Destroy(gameObject); // Destroy bullet gameObject
