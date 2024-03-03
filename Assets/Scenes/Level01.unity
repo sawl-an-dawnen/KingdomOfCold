@@ -847,9 +847,8 @@ MonoBehaviour:
   SLOW_SONG_SPEED_CAP: 0.66
   FAST_SONG_SPEED_CAP: 1
   waitTime: 1
-  crunchTime: 30
+  crunchPercent: 0.2
   TIME_DURATION: 300
-  timeRemaining: 150
 --- !u!1001 &1160913743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1349,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709140046157530203, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: timeDuration
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1709140046157530203, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: toDestroy.Array.size

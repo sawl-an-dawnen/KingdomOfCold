@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,11 @@ public class GameManager : MonoBehaviour
     private float flashDuration = 1f;
     private SceneLoader loader;
 
-   
+    private bool shieldActivated = false;
+    private RawImage shieldBurst;
+    public float fadeAway = 5f;
+
+
     [SerializeField] TextMeshProUGUI firstMinute;
     [SerializeField] TextMeshProUGUI secondMinute;
     [SerializeField] TextMeshProUGUI seperator;
@@ -29,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         ResetTimer();
         loader = GetComponent<SceneLoader>();
+        shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
     }
 
     // Update is called once per frame
@@ -42,7 +48,19 @@ public class GameManager : MonoBehaviour
                 UpdateTimerDisplay(timer);
             }
             else
+            {
                 Flash();
+
+                if (shieldActivated)
+                {
+                    shieldBurst.color = new Color(1f, 1f, 1f, (shieldBurst.color.a - (5f * Time.deltaTime)));
+                }
+                else 
+                {
+                    shieldActivated = true;
+                    shieldBurst.color = new Color(1f, 1f, 1f, 1f);
+                }
+            }
         }
         else
         {

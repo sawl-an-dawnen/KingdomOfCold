@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709140046157530203, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: timeDuration
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1709140046157530203, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: toDestroy.Array.size
