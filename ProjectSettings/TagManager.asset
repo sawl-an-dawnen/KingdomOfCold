@@ -10,6 +10,7 @@ TagManager:
   - Prompt
   - Encouragement
   - Timer
+  - OSB
   layers:
   - Default
   - TransparentFX
