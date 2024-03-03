@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class VerticalSpawner : MonoBehaviour
+public class BossBulletSpawnerHorizantal : MonoBehaviour
 {
-    enum SpawnerType { Straight, Spin, SpinBackWard}
+    enum SpawnerType { Straight, Spin, SpinBackWard, StraigtUp }
     
 
     [Header("Bullet Attributes")]
@@ -27,7 +27,8 @@ public class VerticalSpawner : MonoBehaviour
         timer += Time.deltaTime;
         if(spawnerType == SpawnerType.Spin) transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z + 1f);
         if(spawnerType == SpawnerType.SpinBackWard) transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z + 1f);
-        if(timer >= firingRate)
+        if (spawnerType == SpawnerType.StraigtUp) transform.eulerAngles = new Vector3(0f, 0f, transform.eulerAngles.z + 1f);
+        if (timer >= firingRate)
         {
             if(spawnerType == SpawnerType.SpinBackWard)
             {
@@ -44,17 +45,6 @@ public class VerticalSpawner : MonoBehaviour
         
         
         
-        /*if(timer >= firingRate && spawnerType != SpawnerType.Test)
-        {
-            Fire();
-            timer = 0f;
-        }
-        else if(timer >= firingRate && spawnerType == SpawnerType.Test)
-        {
-            
-            FireBackward();
-            timer = 0f;
-        }*/
     }
 
     private void Fire()
@@ -85,10 +75,28 @@ public class VerticalSpawner : MonoBehaviour
         if (bullet)
         {
             spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-            spawnedBullet.GetComponent<BossBullet>().speed =  speed ;
+            spawnedBullet.GetComponent<BossBullet>().speed = 0; // No speed along the x-axis
             spawnedBullet.GetComponent<BossBullet>().bulletLife = bulletLife;
-            spawnedBullet.transform.rotation = transform.rotation;
+            spawnedBullet.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // Rotate to face upwards
+            StartCoroutine(MoveUp(spawnedBullet.transform));
         }
+    }
+
+    private IEnumerator MoveUp(Transform bulletTransform)
+    {
+        float elapsedTime = 0f;
+        Vector3 startPosition = bulletTransform.position;
+        Vector3 targetPosition = startPosition + Vector3.up; // Move 1 unit upwards
+
+        while (elapsedTime < bulletLife)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / bulletLife;
+            bulletTransform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            yield return null;
+        }
+
+        Destroy(bulletTransform.gameObject); // Destroy the bullet after its lifetime
     }
 
 

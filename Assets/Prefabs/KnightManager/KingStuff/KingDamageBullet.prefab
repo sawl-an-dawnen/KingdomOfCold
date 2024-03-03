@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2413542982907326749}
   - component: {fileID: 3387205861201205807}
   m_Layer: 0
-  m_Name: WizardDamageBullet
+  m_Name: KingDamageBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
