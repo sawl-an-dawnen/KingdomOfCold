@@ -11,6 +11,7 @@ public class BGMusicController : MonoBehaviour
 {
     private AudioSource audioSource;
     private AudioMixerGroup audioMixerGroup;
+    private GameManager gameManager;
     public float songSpeed;
     public bool isCrunchTime = false;
     public const float WAIT_LIMIT = 1.0f;
@@ -20,17 +21,20 @@ public class BGMusicController : MonoBehaviour
     [Tooltip("2.0 = twice as fast")]
     public float FAST_SONG_SPEED_CAP = 1.0f;
     public float waitTime = WAIT_LIMIT;
-    public float crunchTime = 30f;
-    // THIS IS DUMMY CODE BELOW
-    // THIS WILL BE UPDATED WHEN GAME MANAGER IS IN THE GAME
+    private float crunchTime = 30f;
+    public float crunchPercent = 0.2f;
     public float TIME_DURATION = 300f;
-    public float timeRemaining = 150f;
-    // END DUMMY CODE
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
         audioMixerGroup = audioSource.outputAudioMixerGroup;
+        
+        TIME_DURATION = gameManager.timeDuration;
+        crunchTime = crunchPercent * TIME_DURATION;
         songSpeed = SLOW_SONG_SPEED_CAP;
+        audioSource.pitch = songSpeed;
+        audioMixerGroup.audioMixer.SetFloat("pitchBend", 1.0f / songSpeed);
     }
 
     // Update is called once per frame
@@ -43,10 +47,7 @@ public class BGMusicController : MonoBehaviour
         if ((waitTime -= Time.deltaTime) <= 0.0f)
         {
             waitTime = WAIT_LIMIT;
-            // THIS IS DUMMY CODE BELOW
-            // THIS WILL BE UPDATED WHEN GAME MANAGER IS IN THE GAME
-            timeRemaining -= WAIT_LIMIT;
-            // END DUMMY CODE
+            float timeRemaining = gameManager.getTime();
             if (timeRemaining <= crunchTime)
             {
                 audioSource.pitch = 1.0f;

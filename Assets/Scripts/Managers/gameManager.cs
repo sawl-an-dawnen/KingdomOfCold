@@ -123,4 +123,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(winTimer);
         loader.LoadScene();
     }
+    
+    public float getTime()
+    {
+        return timer;
+    }
 }
