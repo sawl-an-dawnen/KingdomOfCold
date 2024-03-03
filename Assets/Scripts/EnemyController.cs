@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -8,6 +9,9 @@ public class EnemyController : MonoBehaviour
     public float speed;
     [HideInInspector]
     public Vector3 direction;
+
+    [Range(0.0f, 100f)]
+    public float speedPenalty = 10f;
 
     private Transform playerTarget;
     private PlayerManager playerManager;
@@ -53,7 +57,7 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log("ENEMY COLLISION");
             playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
-            playerManager.GetSlowed(10); // Call GetSlowed method from PlayerManager
+            playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
         }
     }
 }
