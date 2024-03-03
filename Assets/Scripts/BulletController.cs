@@ -10,8 +10,10 @@ public class BulletController : MonoBehaviour
 
     public float speed = 50f;
     public float timePenalty = 5f;
+    public AudioClip audioClip;
 
     private PlayerManager playerManager;
+    private AudioSource playerAudio;
     private Transform playerTarget;
 
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = (playerTarget.position - gameObject.transform.position).normalized;
         GetComponent<Rigidbody2D>().velocity = direction * speed;
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
-
+        playerAudio = GameObject.FindGameObjectWithTag("Player").transform.Find("HitSfx").GetComponent<AudioSource>();
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +32,7 @@ public class BulletController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Collided with player");
+            playerAudio.PlayOneShot(audioClip);
             //if player is hit by a DamageBullet, decrement player health.
             if (type == Type.Damage)
             {
