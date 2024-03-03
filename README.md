@@ -72,7 +72,8 @@ Asset Sources:
     Over Shield Blast: 
     https://pixabay.com/sound-effects/air-hockey-smack-61272/ and https://pixabay.com/sound-effects/wind-blow-141288/
     
-    Player Death: Voiced by Benjamin Price 🙂
+    Player Death:
+    Voiced by Benjamin Price 🙂
     
     3rd Level Boss Sfx: 
     https://pixabay.com/sound-effects/frosty-wind-nature-sounds-8051/
