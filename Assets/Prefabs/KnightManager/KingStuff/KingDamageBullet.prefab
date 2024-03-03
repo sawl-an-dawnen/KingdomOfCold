@@ -165,3 +165,7 @@ MonoBehaviour:
   bulletLife: 20
   rotation: 0
   speed: 10
+  timePenalty: 5
+  speedPenalty: 30
+  bulletAudioClip: {fileID: 8300000, guid: 35950013a5553634e8be82ee5e622390, type: 3}
+  bossAudioClip: {fileID: 8300000, guid: 9d41745d88dc9ee429c279c3d31bba05, type: 3}
