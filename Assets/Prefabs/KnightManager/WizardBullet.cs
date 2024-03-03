@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightBullet : MonoBehaviour
+public class BossBullet : MonoBehaviour
 {
     public enum Type { Damage, Time }
 
