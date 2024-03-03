@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Game Manager
   - Wall
+  - Prompt
+  - Encouragement
   layers:
   - Default
   - TransparentFX
