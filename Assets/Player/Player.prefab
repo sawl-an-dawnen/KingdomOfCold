@@ -596,12 +596,12 @@ MonoBehaviour:
   debugMode: 0
   playerHealth: 3
   overDriveShieldBurts: 3
-  life01: {fileID: 0}
-  life02: {fileID: 0}
-  life03: {fileID: 0}
-  osb01: {fileID: 0}
-  osb02: {fileID: 0}
-  osb3: {fileID: 0}
+  life01: {fileID: 6550995618454099638}
+  life02: {fileID: 7823002296746786042}
+  life03: {fileID: 6024975158025615403}
+  osb01: {fileID: 2081727057104600225}
+  osb02: {fileID: 2658363770165140806}
+  osb03: {fileID: 6818380082908276692}
   penaltyDuration: 2
   invincibleCounter: 2
   fadeIntensity: 50
