@@ -354,6 +354,10 @@ PrefabInstance:
       value: 159.99998
       objectReference: {fileID: 0}
     - target: {fileID: 4629175216130278814, guid: 74b022636ae13c44cb4abf10084fbc86, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6024876815095282719, guid: ca9fa0cfdbfe82e49a49d626d5be239a, type: 3}
+    - target: {fileID: 4629175216130278814, guid: 74b022636ae13c44cb4abf10084fbc86, type: 3}
       propertyPath: firingRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -508,12 +512,28 @@ PrefabInstance:
       propertyPath: iCounter
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2026216756097296678, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: dodgeCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026216756097296678, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: invisibleCounter
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5503268936448383723, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: playerHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: overDriveShieldBurts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7654965410610995760, guid: 9a3969e0ce2dca44880c343621644496, type: 3}

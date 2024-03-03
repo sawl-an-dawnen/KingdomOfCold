@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -195.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1614845882581302867, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6024876815095282719, guid: f2271106490c5b541acd23a2461d658d, type: 3}
     - target: {fileID: 1895177523619777228, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -98.3
@@ -344,6 +348,10 @@ PrefabInstance:
       propertyPath: firingRate
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 2674541462701014180, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6024876815095282719, guid: f2271106490c5b541acd23a2461d658d, type: 3}
     - target: {fileID: 2872091609711072366, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -388,6 +396,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6176307419824292452, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6024876815095282719, guid: f2271106490c5b541acd23a2461d658d, type: 3}
     - target: {fileID: 6179326993077876401, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -400,6 +412,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 261.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7993241991194466407, guid: 4d790d6c7db986f4b84a2a5fb60ea3ab, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6024876815095282719, guid: f2271106490c5b541acd23a2461d658d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -423,6 +439,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: playerHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: overDriveShieldBurts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7654965410610995760, guid: 9a3969e0ce2dca44880c343621644496, type: 3}

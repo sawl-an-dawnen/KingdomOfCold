@@ -305,6 +305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 778558721193431071, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
+      propertyPath: _spawnPawnTimer
+      value: 
+      objectReference: {fileID: 7596182161332056578, guid: 701d3e89efe70f049b911a8706854e4e, type: 3}
     - target: {fileID: 2398122992230911797, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -437,6 +441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 778558721193431071, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
+      propertyPath: _spawnPawnTimer
+      value: 
+      objectReference: {fileID: 7596182161332056578, guid: 701d3e89efe70f049b911a8706854e4e, type: 3}
     - target: {fileID: 2398122992230911797, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -858,7 +866,6 @@ MonoBehaviour:
   FAST_SONG_SPEED_CAP: 1
   FAST_SPEED_BUFFER: 1.5
   waitTime: 1
-  crunchPercent: 0.2
   TIME_DURATION: 300
 --- !u!1001 &1160913743
 PrefabInstance:
@@ -868,6 +875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 778558721193431071, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
+      propertyPath: _spawnPawnTimer
+      value: 
+      objectReference: {fileID: 7596182161332056578, guid: 701d3e89efe70f049b911a8706854e4e, type: 3}
     - target: {fileID: 4718663903102215308, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
       propertyPath: m_Name
       value: Spawner (1)
@@ -1184,6 +1195,14 @@ PrefabInstance:
       propertyPath: life03
       value: 
       objectReference: {fileID: 1204535050}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: playerHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: overDriveShieldBurts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6550995618454099638, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1620,6 +1639,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 778558721193431071, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
+      propertyPath: _spawnPawnTimer
+      value: 
+      objectReference: {fileID: 7596182161332056578, guid: 701d3e89efe70f049b911a8706854e4e, type: 3}
     - target: {fileID: 4718663903102215308, guid: ee0b00589965e5d4b93c9fd789fae82d, type: 3}
       propertyPath: m_Name
       value: Spawner

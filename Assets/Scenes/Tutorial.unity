@@ -591,6 +591,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: playerHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
+      propertyPath: overDriveShieldBurts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7910583594720880417, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
