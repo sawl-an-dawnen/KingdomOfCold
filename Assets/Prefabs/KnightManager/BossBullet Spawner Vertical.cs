@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BossBulletSpawner : MonoBehaviour
+public class VerticalSpawner : MonoBehaviour
 {
     enum SpawnerType { Straight, Spin, SpinBackWard}
     

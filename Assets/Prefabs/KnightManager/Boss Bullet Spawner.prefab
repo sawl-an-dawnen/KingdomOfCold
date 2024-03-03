@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4107430651821373708}
-  - component: {fileID: -4980492250711753920}
+  - component: {fileID: 487695100181381067}
+  - component: {fileID: -838234379769740069}
   m_Layer: 0
   m_Name: Boss Bullet Spawner
   m_TagString: Untagged
@@ -32,7 +33,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4980492250711753920
+--- !u!114 &487695100181381067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794641171384606991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc0c09e6f031fd4889d7e1943eb910f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  speed: 0
+--- !u!114 &-838234379769740069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,8 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e902327cc6c201742b7e5ce3b431a67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6024876815095282719, guid: ca9fa0cfdbfe82e49a49d626d5be239a, type: 3}
-  bulletLife: 10
-  speed: 15
-  spawnerType: 1
-  firingRate: 0.1
+  bullet: {fileID: 0}
+  bulletLife: 1
+  speed: 1
+  spawnerType: 0
+  firingRate: 1
