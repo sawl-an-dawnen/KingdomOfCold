@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: -208693401
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ec2c757c0e71ac4a96fc4da8b854316, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaee30c0cfde9a74cb8436f8cf83250d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -658,6 +658,18 @@ PrefabInstance:
     - target: {fileID: 1377429463122905373, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392085233305628743, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709140046157530203, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: keepTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3390035324009662431, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3535877678182741776, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: m_text
