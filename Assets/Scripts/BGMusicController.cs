@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem.Interactions;
 
 [RequireComponent(typeof(AudioSource))]
 public class BGMusicController : MonoBehaviour
 {
     private AudioSource audioSource;
     private AudioMixerGroup audioMixerGroup;
-    public float songSpeed = 0.5f;
+    public float songSpeed;
     public bool isCrunchTime = false;
     public const float WAIT_LIMIT = 1.0f;
     [Tooltip("1.0f is the intended speed")]
@@ -29,6 +30,7 @@ public class BGMusicController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         audioMixerGroup = audioSource.outputAudioMixerGroup;
+        songSpeed = SLOW_SONG_SPEED_CAP;
     }
 
     // Update is called once per frame
