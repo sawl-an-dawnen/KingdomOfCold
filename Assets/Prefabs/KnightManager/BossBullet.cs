@@ -15,18 +15,25 @@ public class BossBullet : MonoBehaviour
     public float timePenalty = 5f;
     [Range(0.0f, 100f)]
     public float speedPenalty = 30f;
+    public AudioClip bulletAudioClip;
+    public AudioClip bossAudioClip;
 
     private Vector2 spawnPoint;
     private float timer = 0f;
 
     private PlayerManager playerManager;
     private GameManager gameManager;
+    private AudioSource playerHitAudio;
+    private AudioSource bossHitAudio;
     // Start is called before the first frame update
     void Start()
     {
         spawnPoint = new Vector2(transform.position.x, transform.position.y);
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
         gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
+        var playerGameObject = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHitAudio = playerGameObject.Find("HitSfx").GetComponent<AudioSource>();
+        bossHitAudio = playerGameObject.Find("BossSfx").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +59,9 @@ public class BossBullet : MonoBehaviour
         {
             Debug.Log("Collided with player");
             //if player is hit by a DamageBullet, decrement player health.
+            bossHitAudio.Stop();
+            playerHitAudio.PlayOneShot(bulletAudioClip);
+            bossHitAudio.PlayOneShot(bossAudioClip);
             if (type == Type.Damage)
             {
                 playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
