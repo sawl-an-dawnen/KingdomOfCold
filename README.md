@@ -1,6 +1,5 @@
 Keyboard Controls:
     Menu Interactions -  
-      Traverse Menu -
         Up     :   W Key/ UpArrow Key
         Down   :   S Key/ UpArrow Key
         Left   :   A Key/ UpArrow Key
@@ -16,8 +15,7 @@ Keyboard Controls:
       Overdrive Sheild Burst: F Key
 
 Controller Controls:
-    Menu Interactions -  
-      Traverse Menu -
+    Menu Interactions -           
         Up     :   Up Left Analouge Joystick
         Down   :   Down Left Analouge Joystick
         Left   :   Left Left Analouge Joystick
