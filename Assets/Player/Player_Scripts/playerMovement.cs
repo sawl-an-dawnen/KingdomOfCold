@@ -12,6 +12,7 @@ public class playerMovement : MonoBehaviour
 
     private CustomInputs input;
     private Rigidbody2D rb;
+    private PlayerManager playerManager;
 
     private Animator animator;
 
@@ -28,6 +29,7 @@ public class playerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
         osbSound = GetComponent<AudioSource>();
+        playerManager = GetComponent<PlayerManager>();
     }
 
     private void Update()
@@ -108,19 +110,23 @@ public class playerMovement : MonoBehaviour
     public void OSButton(InputAction.CallbackContext context)
     {
         //Debug.Log("Player used OSB");
-
-        shieldBurst.color = new Color(1f, 1f, 1f, 1f);
-        shieldActivated = true;
-
-        // Find all objects tagged as "bullet"
-        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-
-        // Destroy all bullets
-        foreach (GameObject bullet in bullets)
+        if (playerManager.overDriveShieldBurts > 0)
         {
-            Destroy(bullet);
+            shieldBurst.color = new Color(1f, 1f, 1f, 1f);
+            shieldActivated = true;
+
+            // Find all objects tagged as "bullet"
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+
+            // Destroy all bullets
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+            osbSound.Play();
+
+            playerManager.overDriveShieldBurts--;
         }
-        osbSound.Play();
     }
 
     private void IsolateAnimation(string exclude) 

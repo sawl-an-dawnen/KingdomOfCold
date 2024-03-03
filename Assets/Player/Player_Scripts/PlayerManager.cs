@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerManager : MonoBehaviour
     public bool debugMode = false;
     public int playerHealth = 3;
     public int overDriveShieldBurts = 3;
+    public GameObject life01, life02, life03;
+    public GameObject osb01, osb02, osb03;
     public float penaltyDuration = 2f;
     public float invincibleCounter = 2.0f;
     [Range(0.0f, 100f)]
@@ -41,6 +44,27 @@ public class PlayerManager : MonoBehaviour
         { 
             movement.moveSpeed = defaultSpeed; 
         }
+
+        if (playerHealth == 2) {
+            Destroy(life03);
+        }
+        if (playerHealth == 1)
+        {
+            Destroy(life02);
+        }
+        if (overDriveShieldBurts == 2)
+        {
+            Destroy(osb03);
+        }
+        if (overDriveShieldBurts == 1)
+        {
+            Destroy(osb02);
+        }
+        if (overDriveShieldBurts == 0)
+        {
+            Destroy(osb01);
+        }
+
     }
 
     public void TakeDamage()
