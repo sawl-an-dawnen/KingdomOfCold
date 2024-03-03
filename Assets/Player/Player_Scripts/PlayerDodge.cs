@@ -115,7 +115,6 @@ public class PlayerDodge : MonoBehaviour
     {
         yield return new WaitForSeconds(dodgeCooldown);
         canDodge = true; // Enable dodge after cooldown is over
-        boxCollider.enabled = true;
     }
     private IEnumerator InvinsibleCounter()
     {

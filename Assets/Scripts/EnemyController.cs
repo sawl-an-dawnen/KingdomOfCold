@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log("ENEMY COLLISION");
             playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
-            playerManager.GetSlowed(); // Call GetSlowed method from PlayerManager
+            playerManager.GetSlowed(10); // Call GetSlowed method from PlayerManager
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Prompt
   - Encouragement
+  - Timer
   layers:
   - Default
   - TransparentFX

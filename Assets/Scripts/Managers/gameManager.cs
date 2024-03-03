@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    public bool keepTime = true;
+    public float winTimer = 3f;
+    public GameObject[] toDestroy;
     // Start is called before the first frame update
     public float timeDuration = 1.3f * 60f;
     private float timer;
     private float flashTimer;
     private float flashDuration = 1f;
+    private SceneLoader loader;
 
    
     [SerializeField] TextMeshProUGUI firstMinute;
@@ -24,18 +28,31 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         ResetTimer();
+        loader = GetComponent<SceneLoader>();
     }
 
     // Update is called once per frame
     void Update()
     {
-      if (timer > 0)
+        if (keepTime)
         {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay(timer);
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+                UpdateTimerDisplay(timer);
+            }
+            else
+                Flash();
         }
-      else
-        Flash();
+        else
+        {
+            firstMinute.text = "";
+            secondMinute.text = "";
+            firstSecond.text = "";
+            secondSecond.text = "";
+            firstMilli.text = "";
+            secondMilli.text = "";
+        }
     }
 
     private void ResetTimer()
@@ -62,8 +79,9 @@ public class gameManager : MonoBehaviour
     {
         timer += time;
     }
-    private  void Flash()
+    private void Flash()
     {
+        StartCoroutine(LoadNext());
         if(timer != 0)
         {
             timer = 0;
@@ -94,5 +112,15 @@ public class gameManager : MonoBehaviour
         secondSecond.enabled = enabled;
         firstMilli.enabled = enabled;
         secondMilli.enabled = enabled;
+    }
+
+    private IEnumerator LoadNext()
+    {
+        foreach (GameObject obj in toDestroy) 
+        {
+            Destroy(obj);
+        }
+        yield return new WaitForSeconds(winTimer);
+        loader.LoadScene();
     }
 }
