@@ -15,11 +15,10 @@ public class BGMusicController : MonoBehaviour
     public float songSpeed;
     public bool isCrunchTime = false;
     public const float WAIT_LIMIT = 1.0f;
-    [Tooltip("1.0f is the intended speed")]
     public float SLOW_SONG_SPEED_CAP = .66f;
 
-    [Tooltip("2.0 = twice as fast")]
     public float FAST_SONG_SPEED_CAP = 1.0f;
+    public float FAST_SPEED_BUFFER = 1.5f;
     public float waitTime = WAIT_LIMIT;
     private float crunchTime = 30f;
     public float crunchPercent = 0.2f;
@@ -30,8 +29,8 @@ public class BGMusicController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioMixerGroup = audioSource.outputAudioMixerGroup;
         
-        TIME_DURATION = gameManager.timeDuration;
-        crunchTime = crunchPercent * TIME_DURATION;
+        TIME_DURATION = gameManager.timeDuration * 1.2f;
+        crunchTime = crunchPercent * gameManager.timeDuration;
         songSpeed = SLOW_SONG_SPEED_CAP;
         audioSource.pitch = songSpeed;
         audioMixerGroup.audioMixer.SetFloat("pitchBend", 1.0f / songSpeed);
@@ -64,7 +63,8 @@ public class BGMusicController : MonoBehaviour
     }
     private float GetSongSpeed(float timeRemaining)
     {
-        float slope = FindSlope(TIME_DURATION, crunchTime, SLOW_SONG_SPEED_CAP, FAST_SONG_SPEED_CAP);
+        // crunch time * some constant so max speed isn't hit right when crunch time begins
+        float slope = FindSlope(TIME_DURATION, crunchTime * FAST_SPEED_BUFFER, SLOW_SONG_SPEED_CAP, FAST_SONG_SPEED_CAP);
         float intercept = FindIntercept(slope, TIME_DURATION, SLOW_SONG_SPEED_CAP);
         float newSongSpeed = FindY(timeRemaining, slope, intercept);
         return Math.Max(SLOW_SONG_SPEED_CAP, Math.Min(FAST_SONG_SPEED_CAP, newSongSpeed));
