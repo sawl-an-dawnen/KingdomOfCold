@@ -3,7 +3,7 @@ Description:
     The Chill King has grown too chill and relaxed and has tired of the heavy weight of his frozen crown. 
     He has sent out a challenge! Any magi who can reach him shall receive the Crown of Frost…     
     
-    but there is a CATCH.
+    BUT THERE'S A CATCH.
     
     Any aspirant must prove their chill nature by NOT RESORTING TO VIOLENCE! 
     The lands of the Kingdom of Cold are hostile and dangerous, but its people are peaceful. 
@@ -54,13 +54,26 @@ Controller Controls:
 Asset Sources:
 
     Sound Design: Benjamin Price
+    
     Music: Benjamin Price using beepbox.co
+    
     Tutorial Ambiance: https://freesound.org/people/blouhond/sounds/157947/
+    
     Player Freeze Hit: https://pixabay.com/sound-effects/ice-winter-snow-walking-on-ice-i-138237/
-    2nd Level Boss Laughs: https://pixabay.com/sound-effects/santaclaus-hohoho-73051/ and https://pixabay.com/sound-effects/santa-claus-merry-christmas-ho-ho-ho-103426/ 
+    
+    2nd Level Boss Laughs:  
+    https://pixabay.com/sound-effects/santaclaus-hohoho-73051/ 
+    https://pixabay.com/sound-effects/santa-claus-merry-christmas-ho-ho-ho-103426/ 
+    
     Over Shield Blast: https://pixabay.com/sound-effects/air-hockey-smack-61272/ and https://pixabay.com/sound-effects/wind-blow-141288/
+    
     Player Death: Voiced by Benjamin Price 🙂
-    3rd Level Boss Sfx: https://pixabay.com/sound-effects/frosty-wind-nature-sounds-8051/ and https://pixabay.com/sound-effects/evil-laughing-89786/ and https://pixabay.com/sound-effects/deep-oh-no-106950/
+    
+    3rd Level Boss Sfx: 
+    https://pixabay.com/sound-effects/frosty-wind-nature-sounds-8051/
+    https://pixabay.com/sound-effects/evil-laughing-89786/ 
+    https://pixabay.com/sound-effects/deep-oh-no-106950/
+    
     All other SFX generated with beepbox.co
 
     
