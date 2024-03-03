@@ -12,7 +12,8 @@ public class EnemyController : MonoBehaviour
 
     [Range(0.0f, 100f)]
     public float speedPenalty = 10f;
-
+    public AudioClip audioClip;
+    private AudioSource playerAudio;
     private Transform playerTarget;
     private PlayerManager playerManager;
 
@@ -21,6 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        playerAudio = playerManager.transform.Find("HitSfx").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class EnemyController : MonoBehaviour
             Debug.Log("ENEMY COLLISION");
             playerManager.TakeDamage(); // Call TakeDamage method from PlayerManager
             playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
+            playerAudio.PlayOneShot(audioClip);
         }
     }
 }

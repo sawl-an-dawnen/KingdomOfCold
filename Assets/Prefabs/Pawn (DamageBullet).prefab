@@ -105,6 +105,7 @@ MonoBehaviour:
   speed: 20
   direction: {x: 0, y: 0, z: 0}
   speedPenalty: 20
+  audioClip: {fileID: 8300000, guid: 96d473136740e5e4c89262bbc42e3d92, type: 3}
 --- !u!114 &-4462712390718656253
 MonoBehaviour:
   m_ObjectHideFlags: 0
