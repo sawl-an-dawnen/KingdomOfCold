@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-
+    public bool debugMode = false;
     
     public int playerHealth = 3;
     public int overDriveShieldBurts = 3;
@@ -16,7 +16,10 @@ public class PlayerManager : MonoBehaviour
        
         if (playerHealth <= 0)
         {
-            Die();
+            if (!debugMode)
+            {
+                Die();
+            }
         }
     }
 

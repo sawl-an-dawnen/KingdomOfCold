@@ -46,7 +46,7 @@ public class PlayerDodge : MonoBehaviour
 
     public void Dodge(InputAction.CallbackContext context)
     {
-        Debug.Log("Player pressed Dodge");
+        //Debug.Log("Player pressed Dodge");
         //If (Dodge button is pressed) (Player is not dodging) (Player is moving)
         if (context.performed && !isDodging && movementScript.moveVector.magnitude > 0 && canDodge)
         {
@@ -74,22 +74,22 @@ public class PlayerDodge : MonoBehaviour
         boxCollider.enabled = false;
         // Calculate dodge direction
         Vector2 dodgeDirection = movementScript.moveVector.normalized; // Dodge in the direction of movement
-        Debug.Log("Dodge Direction: " + dodgeDirection);
+        //Debug.Log("Dodge Direction: " + dodgeDirection);
 
         // Disable player input during dodge
         input.Disable();
-        Debug.Log("Input Disabled");
+        //Debug.Log("Input Disabled");
         // Store current position
         Vector2 startPosition = rb.position;
-        Debug.Log("Start Position: " + startPosition);
+        //Debug.Log("Start Position: " + startPosition);
 
         // Calculate dodge velocity
         Vector2 dodgeVelocity = dodgeDirection * dodgePower;
-        Debug.Log("Dodge Velocity: " + dodgeVelocity);
+        //Debug.Log("Dodge Velocity: " + dodgeVelocity);
 
         // Calculate target position
         Vector2 targetPosition = startPosition + dodgeDirection * dodgeDistance;
-        Debug.Log("Target Position: " + targetPosition);
+        //Debug.Log("Target Position: " + targetPosition);
 
         // Move the player until reaching the target position
         while (Vector2.Distance(rb.position, startPosition) < dodgeDistance)
@@ -105,7 +105,7 @@ public class PlayerDodge : MonoBehaviour
         rb.velocity = Vector2.zero; // Stop the player
         isDodging = false;
         input.Enable();
-        Debug.Log("Input Enabled");
+        //Debug.Log("Input Enabled");
     }
 
     private IEnumerator DodgeCooldown()
