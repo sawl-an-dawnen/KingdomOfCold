@@ -314,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
       propertyPath: instructions.Array.data[5]
-      value: 'You''ll definitly need to dodge some of these attacks! ;) '
+      value: 'You''ll definitely need to dodge some of these attacks! ;) '
       objectReference: {fileID: 0}
     - target: {fileID: 4006993569369164076, guid: 8f469fb34dc90ea418eeb350560a97cf, type: 3}
       propertyPath: instructions.Array.data[6]

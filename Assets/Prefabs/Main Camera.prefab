@@ -318,6 +318,10 @@ MonoBehaviour:
   winTimer: 3
   toDestroy: []
   timeDuration: 78
+  crunchTime: 10
+  crunchPercent: 0.2
+  isCrunchTime: 0
+  promptOpacity: 0
   fadeAway: 5
   firstMinute: {fileID: 9074609261010015954}
   secondMinute: {fileID: 2847499425052899558}
@@ -327,6 +331,7 @@ MonoBehaviour:
   milliSeperator: {fileID: 1392085233305628743}
   firstMilli: {fileID: 22899707719930137}
   secondMilli: {fileID: 547024773520552387}
+  prompt: {fileID: 0}
 --- !u!114 &8582026392920934600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,8 +1382,8 @@ RectTransform:
   m_GameObject: {fileID: 6401177399680486664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 325.40002, y: 325.40002, z: 325.40002}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2126906566561229627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
