@@ -846,10 +846,10 @@ MonoBehaviour:
   isCrunchTime: 0
   SLOW_SONG_SPEED_CAP: 0.66
   FAST_SONG_SPEED_CAP: 1
+  FAST_SPEED_BUFFER: 1.5
   waitTime: 1
-  crunchTime: 30
+  crunchPercent: 0.2
   TIME_DURATION: 300
-  timeRemaining: 150
 --- !u!1001 &1160913743
 PrefabInstance:
   m_ObjectHideFlags: 0

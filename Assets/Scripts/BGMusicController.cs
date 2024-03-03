@@ -18,7 +18,7 @@ public class BGMusicController : MonoBehaviour
     public float SLOW_SONG_SPEED_CAP = .66f;
 
     public float FAST_SONG_SPEED_CAP = 1.0f;
-    public float FAST_SPEED_BUFFER = 1.2f;
+    public float FAST_SPEED_BUFFER = 1.5f;
     public float waitTime = WAIT_LIMIT;
     private float crunchTime = 30f;
     public float crunchPercent = 0.2f;
