@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private bool shieldActivated = false;
     private RawImage shieldBurst;
     public float fadeAway = 5f;
+    private AudioSource gameWinSound;
 
 
     [SerializeField] TextMeshProUGUI firstMinute;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         ResetTimer();
         loader = GetComponent<SceneLoader>();
         shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
+        gameWinSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
                 {
                     shieldActivated = true;
                     shieldBurst.color = new Color(1f, 1f, 1f, 1f);
+                    gameWinSound.Play();
                 }
             }
         }
