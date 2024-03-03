@@ -1413,7 +1413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582026392920934600, guid: 31d981e1f7dbbfb4aa5842593e96e7a7, type: 3}
       propertyPath: level
-      value: Win
+      value: Level02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

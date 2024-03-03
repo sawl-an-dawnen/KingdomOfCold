@@ -104,7 +104,7 @@ MonoBehaviour:
   type: 0
   speed: 50
   timePenalty: 5
-  speedPenalty: 30
+  speedPenalty: 20
   audioClip: {fileID: 8300000, guid: 58d3e054e3afd164a974c6b9bbb936e1, type: 3}
 --- !u!50 &8815314498611892995
 Rigidbody2D:

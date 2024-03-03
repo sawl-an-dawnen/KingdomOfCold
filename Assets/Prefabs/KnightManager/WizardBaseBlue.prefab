@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9117900074337045179}
   - component: {fileID: 7333403610076417048}
   - component: {fileID: 99057493185934593}
+  - component: {fileID: 788457231154378113}
   m_Layer: 0
   m_Name: Blue Wizard
   m_TagString: Untagged
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2747690628134850419, guid: c71dca94f549ca94884b842792d525c6, type: 3}
-  m_Color: {r: 0, g: 0.08727884, b: 1, a: 1}
+  m_Sprite: {fileID: -1979258786, guid: c49cbddaebbff954d932fb6afbc57f5e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.8828125}
+  m_Size: {x: 0.2, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -296,6 +297,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       insertIndex: -1
       addedObject: {fileID: 99057493185934593}
+    - targetCorrespondingSourceObject: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788457231154378113}
   m_SourcePrefab: {fileID: 100100000, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
 --- !u!114 &9117900074337045179
 MonoBehaviour:
@@ -310,10 +314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6024876815095282719, guid: ca9fa0cfdbfe82e49a49d626d5be239a, type: 3}
-  bulletLife: 5
+  bulletLife: 50
   speed: -40
   spawnerType: 1
-  firingRate: 0.1
+  firingRate: 0.05
 --- !u!50 &7333403610076417048
 Rigidbody2D:
   serializedVersion: 4
@@ -356,3 +360,24 @@ MonoBehaviour:
   pointA: {fileID: 3127357033288769310}
   pointB: {fileID: 8929786804965285445}
   speed: 50
+--- !u!95 &788457231154378113
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3122074808653335388}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0cc5b0936fd081949acb688b5a21ccdd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

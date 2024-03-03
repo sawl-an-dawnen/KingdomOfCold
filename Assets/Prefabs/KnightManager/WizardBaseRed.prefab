@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 4629175216130278814}
   - component: {fileID: 972195891800178112}
   - component: {fileID: 1137823860286306455}
+  - component: {fileID: 7080786751197438566}
   m_Layer: 0
   m_Name: Red Wizard
   m_TagString: Untagged
@@ -138,8 +139,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2747690628134850419, guid: c71dca94f549ca94884b842792d525c6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 420472615, guid: 6f22c7602ac07de4f9edf5b42080a78f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -288,6 +289,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1137823860286306455}
+    - targetCorrespondingSourceObject: {fileID: 3628070978779491773, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7080786751197438566}
   m_SourcePrefab: {fileID: 100100000, guid: a38e520e11a298b42b66f8ce2b9d4885, type: 3}
 --- !u!114 &4629175216130278814
 MonoBehaviour:
@@ -302,8 +306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6474476335531204895, guid: d2328bf1ccfbdd542bc2deb7521b7d07, type: 3}
-  bulletLife: 5
-  speed: 40
+  bulletLife: 15
+  speed: 20
   spawnerType: 0
   firingRate: 0.1
 --- !u!50 &972195891800178112
@@ -348,3 +352,24 @@ MonoBehaviour:
   pointA: {fileID: 2536602226693702162}
   pointB: {fileID: 2492312657986024698}
   speed: 50
+--- !u!95 &7080786751197438566
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414869780283442734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cd9c5dece4e05f4290cb145bb7a836f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -105,9 +105,7 @@ MonoBehaviour:
   rotation: 0
   speed: 20
   timePenalty: 5
-  speedPenalty: 30
-  bulletAudioClip: {fileID: 8300000, guid: e906174b0297a2a468fdeaaa2052f607, type: 3}
-  bossAudioClip: {fileID: 8300000, guid: 227c81d5951e066448b137bb48058723, type: 3}
+  speedPenalty: 40
 --- !u!50 &7739939498911835767
 Rigidbody2D:
   serializedVersion: 4
