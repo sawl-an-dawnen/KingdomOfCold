@@ -1,6 +1,10 @@
 Description:
     
-    The Chill King has grown too chill and relaxed and has tired of the heavy weight of his frozen crown. He has sent out a challenge! Any magi who can reach him shall receive the Crown of Frost…     but there is a catch.
+    The Chill King has grown too chill and relaxed and has tired of the heavy weight of his frozen crown. 
+    He has sent out a challenge! Any magi who can reach him shall receive the Crown of Frost…     
+    
+    but there is a CATCH.
+    
     Any aspirant must prove their chill nature by NOT RESORTING TO VIOLENCE! The lands of the Kingdom of Cold are hostile and dangerous, but its people are peaceful. 
     A good regent must prove their worthiness for the crown by displaying a nature predisposed to the principles of Chill. 
     They must dodge danger and show a light hand when dealing with those who would impede them. 
