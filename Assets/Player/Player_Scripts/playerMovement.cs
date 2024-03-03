@@ -16,6 +16,7 @@ public class playerMovement : MonoBehaviour
     private Animator animator;
 
     private RawImage shieldBurst;
+    private AudioSource osbSound;
     private bool shieldActivated = false;
     public float fadeAway = 5f;
     
@@ -26,6 +27,7 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
+        osbSound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -118,6 +120,7 @@ public class playerMovement : MonoBehaviour
         {
             Destroy(bullet);
         }
+        osbSound.Play();
     }
 
     private void IsolateAnimation(string exclude) 
