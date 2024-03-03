@@ -102,10 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   speed: 50
-  bulletSlowTime: 0
-  bulletDamage: 0
-  slowAmount: 0
-  playerTimerIncrement: 0
+  timePenalty: 5
+  audioClip: {fileID: 8300000, guid: e375b587b04b06f43be31759e49e5995, type: 3}
 --- !u!50 &7739939498911835767
 Rigidbody2D:
   serializedVersion: 4

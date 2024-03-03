@@ -18,6 +18,7 @@ public class PlayerDodge : MonoBehaviour
     private BoxCollider2D boxCollider;
     private playerMovement movementScript;
     private CustomInputs input;
+    private AudioSource dodgeAudio;
 
     private Animator animator;
 
@@ -29,6 +30,7 @@ public class PlayerDodge : MonoBehaviour
         movementScript = GetComponent<playerMovement>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        dodgeAudio = transform.Find("DodgeSfx").GetComponent<AudioSource>();
     }
     public void OnEnable()
     {
@@ -56,6 +58,7 @@ public class PlayerDodge : MonoBehaviour
             StartCoroutine(DodgeCooldown()); // Start the dodge cooldown timer
             StartCoroutine(InvinsibleCounter());
             animator.StopPlayback();
+            dodgeAudio.Play();
             if (movementScript.moveVector.x >= 0f)
             {
                 animator.Play("dodge_right");
