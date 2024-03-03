@@ -166,6 +166,8 @@ MonoBehaviour:
   bulletLife: 20
   rotation: 0
   speed: 20
+  timePenalty: 5
+  speedPenalty: 20
 --- !u!95 &4434025815084934219
 Animator:
   serializedVersion: 5

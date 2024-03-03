@@ -104,6 +104,8 @@ MonoBehaviour:
   bulletLife: 20
   rotation: 0
   speed: 20
+  timePenalty: 5
+  speedPenalty: 40
 --- !u!50 &7739939498911835767
 Rigidbody2D:
   serializedVersion: 4
