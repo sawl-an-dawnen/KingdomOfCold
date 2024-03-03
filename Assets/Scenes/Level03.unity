@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6383166120392043191, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: debugMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7654965410610995760, guid: 9a3969e0ce2dca44880c343621644496, type: 3}
       propertyPath: m_Constraints
