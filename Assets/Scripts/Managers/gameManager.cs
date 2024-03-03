@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] toDestroy;
     // Start is called before the first frame update
     public float timeDuration = 1.3f * 60f;
+    public float crunchTime = 10.0f;
+    public float crunchPercent = 0.2f;
+    public bool isCrunchTime = false;
+    private const float PROMPT_FLASH_RANGE = 0.5f;
+    private float promptFlashTimer;
+    private bool promptIsRed = false;
+    public float promptOpacity;
     private float timer;
     private float flashTimer;
     private float flashDuration = 1f;
@@ -30,6 +38,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI milliSeperator;
     [SerializeField] TextMeshProUGUI firstMilli;
     [SerializeField] TextMeshProUGUI secondMilli;
+    [SerializeField] TextMeshProUGUI prompt;
 
     void Start()
     {
@@ -37,6 +46,8 @@ public class GameManager : MonoBehaviour
         loader = GetComponent<SceneLoader>();
         shieldBurst = GameObject.FindGameObjectWithTag("OSB").GetComponent<RawImage>();
         gameWinSound = GetComponent<AudioSource>();
+        promptFlashTimer = PROMPT_FLASH_RANGE;
+        prompt = GameObject.FindGameObjectWithTag("Prompt").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -48,6 +59,7 @@ public class GameManager : MonoBehaviour
             {
                 timer -= Time.deltaTime;
                 UpdateTimerDisplay(timer);
+                UpdatePrompt();
             }
             else
             {
@@ -155,5 +167,36 @@ public class GameManager : MonoBehaviour
     public float getTime()
     {
         return timer;
+    }
+    
+    public void UpdatePrompt()
+    {
+        if (timer <= crunchTime && !isCrunchTime)
+        {
+            isCrunchTime = true;
+            return;
+        }
+        else if (isCrunchTime)
+        {
+            if ((promptFlashTimer -= Time.deltaTime) <= 0.0f)
+            {
+                promptFlashTimer = PROMPT_FLASH_RANGE;
+                if (promptIsRed)
+                {
+                    prompt.color = Color.white;
+                    promptIsRed = false;
+                }
+                else
+                {
+                    prompt.color = Color.red;
+                    promptIsRed = true;
+                }
+            }
+        }
+        else
+        {
+            promptOpacity = Math.Max(0.0f, Math.Min(1.0f, (timeDuration - timer) / timeDuration));
+            prompt.alpha = promptOpacity;
+        }
     }
 }

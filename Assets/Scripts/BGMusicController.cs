@@ -20,9 +20,9 @@ public class BGMusicController : MonoBehaviour
     public float FAST_SONG_SPEED_CAP = 1.0f;
     public float FAST_SPEED_BUFFER = 1.5f;
     public float waitTime = WAIT_LIMIT;
-    private float crunchTime = 30f;
-    public float crunchPercent = 0.2f;
     public float TIME_DURATION = 300f;
+    private float crunchTime = 10.0f;
+    private float crunchPercent = 0.2f;
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
@@ -30,6 +30,8 @@ public class BGMusicController : MonoBehaviour
         audioMixerGroup = audioSource.outputAudioMixerGroup;
         
         TIME_DURATION = gameManager.timeDuration * 1.2f;
+        crunchTime = gameManager.crunchTime;
+        crunchPercent = gameManager.crunchPercent;
         crunchTime = crunchPercent * gameManager.timeDuration;
         songSpeed = SLOW_SONG_SPEED_CAP;
         audioSource.pitch = songSpeed;
