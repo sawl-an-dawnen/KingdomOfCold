@@ -5,7 +5,8 @@ Description:
     
     but there is a CATCH.
     
-    Any aspirant must prove their chill nature by NOT RESORTING TO VIOLENCE! The lands of the Kingdom of Cold are hostile and dangerous, but its people are peaceful. 
+    Any aspirant must prove their chill nature by NOT RESORTING TO VIOLENCE! 
+    The lands of the Kingdom of Cold are hostile and dangerous, but its people are peaceful. 
     A good regent must prove their worthiness for the crown by displaying a nature predisposed to the principles of Chill. 
     They must dodge danger and show a light hand when dealing with those who would impede them. 
     The King’s Subjects will throw obstacles in your way…
