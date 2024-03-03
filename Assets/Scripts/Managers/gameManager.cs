@@ -120,6 +120,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(obj);
         }
+        // Find all objects tagged as "bullet"
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        // Destroy all bullets
+        foreach (GameObject bullet in bullets)
+        {
+            Destroy(bullet);
+        }
         yield return new WaitForSeconds(winTimer);
         loader.LoadScene();
     }

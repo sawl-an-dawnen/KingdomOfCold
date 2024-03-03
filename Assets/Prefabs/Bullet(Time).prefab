@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   speed: 50
-  timePenalty: 5
+  timePenalty: 10
   speedPenalty: 30
   audioClip: {fileID: 8300000, guid: e375b587b04b06f43be31759e49e5995, type: 3}
 --- !u!50 &7739939498911835767

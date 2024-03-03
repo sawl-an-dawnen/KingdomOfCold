@@ -15,6 +15,7 @@ public class BulletController : MonoBehaviour
     public AudioClip audioClip;
 
     private PlayerManager playerManager;
+    private GameManager gameManager;
     private AudioSource playerAudio;
     private Transform playerTarget;
 
@@ -26,6 +27,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = (playerTarget.position - gameObject.transform.position).normalized;
         GetComponent<Rigidbody2D>().velocity = direction * speed;
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
         playerAudio = GameObject.FindGameObjectWithTag("Player").transform.Find("HitSfx").GetComponent<AudioSource>();
     }
     
@@ -47,6 +49,7 @@ public class BulletController : MonoBehaviour
             //if player is hit by a TimeBullet, increment player remaining time
             if (type == Type.Time)
             {
+                gameManager.AddTime(timePenalty);
                 //TODO: increment player's remaining time, slow movement speed = 0.5s, destroy gameObject
                 playerManager.GetSlowed(speedPenalty); // Call GetSlowed method from PlayerManager
                 //Debug.Log("BLUE BULLET");
