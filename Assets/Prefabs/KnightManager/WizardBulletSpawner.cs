@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     enum SpawnerType { Straight, Spin}
+    
 
     [Header("Bullet Attributes")]
     public GameObject bullet;
@@ -14,10 +15,11 @@ public class BulletSpawner : MonoBehaviour
     [Header("Spawner Attributes")]
     [SerializeField] private SpawnerType spawnerType;
     [SerializeField] private float firingRate = 1f;
-
     private GameObject spawnedBullet;
     private float timer = 0f;
 
+
+   
     // Update is called once per frame
     void Update()
     {
@@ -40,5 +42,6 @@ public class BulletSpawner : MonoBehaviour
             spawnedBullet.transform.rotation = transform.rotation;
         }
     }
+
     
 }
